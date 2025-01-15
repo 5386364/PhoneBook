@@ -8,11 +8,14 @@ using PhoneBook.SingletonFolder;
 
 internal class Program()
 {
+    private const string PhoneNumber = "0556850608";
+
     private static void Main(string[] args)
     {
         ContactsList contacts = new ContactsList();
         contacts.AddPhoneNumber(new PhoneContactFactory(), "Sara", "0504126504", ContactGroup.Work, new Dictionary<string, object> { { "MailAddress", "r@gmail.com" }, { "Color", Colors.Cyan } });
-        contacts.AddPhoneNumber(new SimContactFactory(), "Tamar", "0556850608", ContactGroup.General, new Dictionary<string, object> { { "Color", Colors.DarkGray } });
+
+        contacts.AddPhoneNumber(new SimContactFactory(), "Tamar", "055675065645", ContactGroup.General, new Dictionary<string, object> { { "Color", Colors.DarkGray } });
         
 
         PhoneContactBuilder phoneContactBuilder = new PhoneContactBuilder();
